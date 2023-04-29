@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content max-content;
+    gap: 5%;
+    padding: 2rem;
+    background-color: #15803d;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr repeat(5, 1fr) 2fr repeat(2, 1fr);
+    gap: 15px;
+}
+
+.navitem {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    grid-template-rows: minmax(1.5rem, 5%);
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sidebar a {
+    color: #f0fdf4;
+}
+
+#logo img {
+    width: 3rem;
+    filter: invert(94%) sepia(94%) saturate(24%) hue-rotate(57deg) brightness(105%) contrast(108%);
+}
+
+.sidebar img {
+    filter: invert(94%) sepia(94%) saturate(24%) hue-rotate(57deg) brightness(105%) contrast(108%);
+}
+
+#logo span {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #f0fdf4;
+}
+
+.sidebar img, .headertop img {
+    width: 2rem;
+}
+
+.right {
+    flex: 7;
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr;
+}
+
+.header {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    box-shadow: 0px 5px 5px #BBBBBB;
+    padding: 1rem 5%;
+}
+
+.headertop {
+    display: grid;
+    grid-template-columns: max-content minmax(8rem, 60%) minmax(0%, 20%) max-content max-content max-content;
+    gap: 1.75rem;
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+
+.headerbottom {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+
+#search {
+    border-style: none;
+    background-color: #EEEEEE;
+    border-radius: 20px;
+    height: 1.8rem;
+    padding-left: 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+#search:focus {
+    outline: solid 1px #166534;
+}
+
+#profile-small {
+    width: 4rem;
+}
+
+.identifier {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.greeting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+}
+
+.posts {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+.header span {
+    color: #052e16;
+    font-size: 1rem;
+}
+
+.headertop span {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+#user {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.profileimg img {
+    border-radius: 50%;
+    width: 5rem;
+}
+
+button {
+    border-style: none;
+    border-radius: 20px;
+    padding: 0.75rem 2rem;
+    background-color: #059669;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.main {
+    display: grid;
+    grid-template: 50% 50% / 3.5fr 1fr;
+    grid-template-areas: "projects announcements" 
+    "projects trending";
+    background-color: #dcfce7;
+}
+
+.projects {
+    grid-area: projects;
+    padding: 1.5rem 2rem;
+}
+
+.projects .card {
+    display: flex;
+    flex-direction: column;
+}
+
+.icons {
+    align-self: flex-end;
+}
+
+.projects .card p {
+    flex: 1;
+}
+
+.heading {
+    padding-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+.cards {
+    display: grid;
+    grid-template: 1fr 1fr 1fr/ 1fr 1fr;
+    gap: 2rem;
+}
+
+.card {
+    background-color: white;
+    padding: 4%;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px #BBBBBB;
+}
+
+.card:hover, #logo:hover, button:hover {
+    cursor: pointer;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+.projects .card {
+    border-left: solid 0.75rem #14532d;
+}
+
+.projects img {
+    width: 1.5rem;
+}
+
+.announcements {
+    grid-area: announcements;
+    padding: 1.5rem 2rem;
+}
+
+
+.announcement {
+    border-bottom: solid 1px #bbbbbb;
+}
+
+#last-announcement {
+    border: none;
+}
+
+.announcement h4 {
+    padding: 0.5rem 0rem 0.5rem;
+}
+
+p {
+    color: #777777;
+}
+
+.announcements p {
+    display: -webkit-box;
+    max-width: 30ch;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.trending {
+    grid-area: trending;
+    padding: 2rem 2rem 0rem;
+}
+
+.trending .card {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: minmax(20ch, 35ch);
+    gap: 1rem;
+}
+
+.trending .card:hover {
+    cursor: auto;
+}
+
+.trendinguser {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
